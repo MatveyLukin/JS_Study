@@ -1,0 +1,57 @@
+.square {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  margin: 40px;
+}
+.rectangle {
+  width: 250px;
+  height: 100px;
+  background: brown;
+  border: 2px solid coral;
+  margin: 40px;
+}
+.round {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  margin: 40px;
+  border-radius: 50%;
+}
+.rectangle_rgb {
+  width: 100px;
+  height: 75px;
+  background: rgb(255, 157, 80);
+  margin: 40px;
+}
+
+.rectangle_rgb2 {
+  width: 100px;
+  height: 75px;
+  background: coral;
+  margin: 40px;
+}
+.barge {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+.Indian {
+  font-size: 18px;
+  color: #333;
+  font-family: Georgia, serif;
+  font-weight: 800;
+}
+.Physicist {
+  font-size: 16px;
+}
+.KISS {
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: bold;
+}
+.coral {
+  background-color: coral;
+}
