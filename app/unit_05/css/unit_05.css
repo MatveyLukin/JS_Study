@@ -210,10 +210,6 @@ p {
   position: absolute;
 }
 
-.out-4 .t-1 {
-  /*надо ли прописывать установленные координаты?*/
-}
-
 .out-4 .t-2 {
   bottom: 0;
 }
@@ -307,7 +303,6 @@ p {
 /* Task 9 -------------------------------------- */
 .out-9 {
   position: relative;
-  display: inline-block;
   width: 300px;
   height: 30px;
   border: 1px solid black;
@@ -318,7 +313,6 @@ p {
 .out-9 .span-9-2,
 .out-9 .span-9-3 {
   position: absolute;
-  display: block;
   width: 100px;
   height: 30px;
   text-align: center;
@@ -339,7 +333,20 @@ p {
   height: 90px;
   position: relative;
   /* потом свойство background удалите */
-  background: orange;
+}
+
+.out-10 .block-1,
+.out-10 .block-2,
+.out-10 .block-3 {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.out-10 .block-2 {
+  position: relative;
+  left: 150px;
 }
 
 /* Task 10 END -------------------------------------- */
