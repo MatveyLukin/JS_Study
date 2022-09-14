@@ -143,15 +143,10 @@ p {
 
 .out-1 {
   display: grid;
-<<<<<<< HEAD
-  grid-template-areas: "header header" "aside main" "footer footer";
-
-=======
   grid-template-areas:
     "header header"
     "aside main"
     "footer footer";
->>>>>>> c86cc2ab098ce393f00d27950211614a08402ffc
   grid-gap: 5px;
   margin: 0;
   grid-template-rows: 50px 200px 50px;
@@ -178,21 +173,12 @@ p {
 
 .out-2 {
   display: grid;
-<<<<<<< HEAD
-=======
   grid-gap: 5px;
   margin: 0;
->>>>>>> c86cc2ab098ce393f00d27950211614a08402ffc
   grid-template-areas:
     "header header header"
     "aside main aside-2"
     "footer footer footer";
-<<<<<<< HEAD
-  grid-gap: 5px;
-  margin: 0;
-  grid-template-rows: 50px 200px 50px;
-  grid-template-columns: 25% 1fr 25%;
-=======
   grid-template-rows: 50px 200px 50px;
   grid-template-columns: 25% 1fr 25%;
 }
@@ -203,51 +189,21 @@ p {
 
 .out-2 footer {
   grid-area: footer;
->>>>>>> c86cc2ab098ce393f00d27950211614a08402ffc
 }
 
-.out-2 header {
-  grid-area: header;
-}
-
-.out-2 aside {
-  grid-area: aside;
-}
-
-.out-2 main {
-  grid-area: main;
-}
-
-.out-2 .aside-2 {
-  grid-area: aside-2;
-}
-
-.out-2 footer {
-  grid-area: footer;
-}
 /* =============== task 3 ============================= */
 
 .out-3 {
   display: grid;
-<<<<<<< HEAD
-=======
   grid-gap: 5px;
   margin: 0;
->>>>>>> c86cc2ab098ce393f00d27950211614a08402ffc
   grid-template-areas:
     "header header"
     "news-1 news-2"
     "news-3 news-4"
     "footer footer";
-<<<<<<< HEAD
-  grid-gap: 5px;
-  margin: 0;
-  grid-template-rows: 50px 200px 200px 50px;
-  /* пропи *сывать размеры или нет?*/
-=======
   grid-template-rows: 50px 200px 200px 50px;
   grid-template-columns: 50% 50%;
->>>>>>> c86cc2ab098ce393f00d27950211614a08402ffc
 }
 
 .out-3 header {
