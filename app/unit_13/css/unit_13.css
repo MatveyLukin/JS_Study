@@ -145,11 +145,13 @@ p {
 }
 
 .out-1 .block-1 {
-  animation-name: round;
+  animation-name: tsk-1;
+  animation-duration: 1s;
   animation-iteration-count: 3;
+  animation-fill-mode: forwards;
 }
 
-@keyframes round {
+@keyframes tsk-1 {
   from {
   }
   to {
@@ -157,3 +159,65 @@ p {
     background: orangered;
   }
 }
+
+.out-2 .block-2 {
+  animation-name: tsk-2;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  position: relative;
+  left: 0;
+}
+
+@keyframes tsk-2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 830px;
+  }
+  100% {
+    left: 0;
+
+  }
+}
+
+.out-3 img {
+  animation-name: tsk-3;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes tsk-3 {
+  from {
+
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.out-4 {
+  width: 100px;
+  height: 25px;
+  margin: 100px auto;
+  border: 1px solid black;
+}
+
+.out-4 .out-4-inner {
+  position: relative;
+  right: 0;
+}
+
+.out-4-inner Left, .out-4-inner Center.out-4-inner Right {
+  padding: 10px;
+}
+
+/* .out-4 .out-4-inner {
+  animation-name: tsk-4;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes {
+
+} */
