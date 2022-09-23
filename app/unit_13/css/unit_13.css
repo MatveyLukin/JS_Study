@@ -127,82 +127,33 @@ p {
   height: 100px;
 }
 
+.out-1 img,
+.out-2 img,
+.out-3 img,
+.out-4 img,
+.out-5 img,
+.out-6 img,
+.out-7 img,
+.out-8 img,
+.out-9 img {
+  width: 128px;
+}
+
 .block {
-  width: 50px;
+  width: 150px;
   height: 150px;
-  margin: 1%;
 }
 
-.block-3 {
-  width: 100px;
-  height: 100px;
+.out-1 .block-1 {
+  animation-name: round;
+  animation-iteration-count: 3;
 }
 
-/*========================*/
-
-.link-1:hover {
-  color: #7fff00;
-}
-
-.link-2:hover {
-  color: #d2691e;
-}
-
-.btn-2:hover {
-  background-color: #556b2f;
-}
-
-.out-3 .block-3 {
-  transition: all ease 1s;
-}
-
-.out-3 .block-3:hover {
-  width: 500px;
-}
-
-.p-4::after {
-  content: "***";
-  margin: 20px 0 20px 0;
-  display: block;
-  text-align: center;
-}
-
-.p-5::before {
-  content: "[";
-  color: orangered;
-}
-
-.p-5::after {
-  content: "]";
-  color: orangered;
-}
-
-.ul-6 li {
-  list-style-type: none;
-}
-
-.ul-6 li::before {
-  content: "\201c";
-}
-
-.out-7 .p-7::first-letter {
-  font-family: Georgia;
-  color: orangered;
-  font-size: 38px;
-}
-
-.out-8 .p-8::first-line {
-  color: orangered;
-}
-
-.out-9 .p-9::first-line {
-  color: red;
-}
-
-.out-9 .p-9::first-letter {
-  color: green;
-}
-
-.out-10 .i-10:focus {
-  background-color: orangered;
+@keyframes round {
+  from {
+  }
+  to {
+    border-radius: 50%;
+    background: orangered;
+  }
 }
