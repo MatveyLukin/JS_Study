@@ -177,7 +177,6 @@ p {
   }
   100% {
     left: 0;
-
   }
 }
 
@@ -189,35 +188,137 @@ p {
 
 @keyframes tsk-3 {
   from {
-
   }
   to {
     transform: rotate(360deg);
   }
 }
 
-.out-4 {
+/* .out-4 {
   width: 100px;
   height: 25px;
-  margin: 100px auto;
+  margin: 0 auto;
   border: 1px solid black;
 }
 
 .out-4 .out-4-inner {
+  width: 400px;
+  height: 25px;
+  position: absolute;
+}
+
+.out-4-inner span {
+  display: inline-block;
+  padding: 5px;
+  width: 100px;
+  height: 25px;
+  text-align: center;
   position: relative;
-  right: 0;
 }
 
-.out-4-inner Left, .out-4-inner Center.out-4-inner Right {
-  padding: 10px;
-}
-
-/* .out-4 .out-4-inner {
+.out-4 .out-4-inner {
   animation-name: tsk-4;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  right: 0;
 }
 
-@keyframes {
-
+@keyframes tsk-4 {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: -100px;
+  }
+  50% {
+    right: 100px;
+  }
+  100% {
+    right: -300px;
+  }
 } */
+
+.out-4 {
+  width: 90px;
+
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.out-4-inner {
+  width: 450px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  animation: tsk-4 4s infinite;
+}
+
+.out-4-inner span {
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+  line-height: 30px;
+}
+
+@keyframes tsk-4 {
+  0% {
+    left: 0;
+  }
+
+  33% {
+    left: -90px;
+  }
+
+  66% {
+    left: -180px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+/*============= task 5 ==============*/
+
+.out-5 {
+  border: 1px solid #000;
+  width: 130px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.out-5-inner {
+  display: flex;
+}
+
+.out-5-inner img {
+  position: relative;
+  animation: out5 4s infinite;
+  width: 130px;
+}
+
+@keyframes out5 {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: -130px;
+  }
+
+  50% {
+    left: -260px;
+  }
+
+  75% {
+    left: -390px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
