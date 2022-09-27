@@ -194,11 +194,13 @@ p {
   }
 }
 
-/* .out-4 {
+.out-4 {
   width: 100px;
   height: 25px;
   margin: 0 auto;
   border: 1px solid black;
+  position: relative;
+  overflow: hidden;
 }
 
 .out-4 .out-4-inner {
@@ -213,32 +215,31 @@ p {
   width: 100px;
   height: 25px;
   text-align: center;
-  position: relative;
 }
 
 .out-4 .out-4-inner {
   animation-name: tsk-4;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  right: 0;
+  left: 0;
 }
 
 @keyframes tsk-4 {
   0% {
-    right: 0;
+    left: 0;
   }
-  25% {
-    right: -100px;
+  33% {
+    left: -105px;
   }
-  50% {
-    right: 100px;
+  66% {
+    left: -210px;
   }
   100% {
-    right: -300px;
+    left: 0px;
   }
-} */
+}
 
-.out-4 {
+/* .out-4 {
   width: 90px;
 
   height: 30px;
@@ -284,7 +285,7 @@ p {
 
 /*============= task 5 ==============*/
 
-.out-5 {
+/* .out-5 {
   border: 1px solid #000;
   width: 130px;
   margin: 0 auto;
@@ -321,4 +322,4 @@ p {
   100% {
     left: 0;
   }
-}
+}  */
