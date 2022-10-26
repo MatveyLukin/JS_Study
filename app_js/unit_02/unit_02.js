@@ -50,7 +50,7 @@ document.querySelector(".out-7").textContent = e4 * f4;
 // Task 8.
 // По нажатию на кнопку .b-8 выполняется функция, которая выводит в div.out-8 то, что пользователь ввел в input.i-8.
 
-let inputIn = document.querySelector(".i-8");
+
 let button = document.querySelector(".b-8");
 let div = document.querySelector(".out-8");
 
@@ -66,17 +66,17 @@ button.onclick = function t8() {
 // Task 9.
 // По нажатию на кнопку .b-9 выполняется функция t9, которая выводит в div.out-9 то, что пользователь ввел в input.i-9. Добавьте очистку input после нажатия кнопки.
 
-let inputIn9 = document.querySelector(".i-9");
+
 let div9 = document.querySelector(".out-9");
 
 function t9() {
-  let data = document.querySelector(".i-9").value;
+  let data9 = document.querySelector(".i-9").value;
 
   console.log(
     `Зафиксировано нажатие на кнопке, в инпуте было значение ${data}`
   );
   div9.innerHTML = data;
-  inputIn9.value = "";
+  data9.value = "";
 }
 
 document.querySelector(".b-9").onclick = t9;
@@ -84,7 +84,6 @@ document.querySelector(".b-9").onclick = t9;
 // Task 10.
 // По нажатию на кнопку .b-10 выполняется функция t10, которая выводит в div.out-10 то, что пользователь ввел в input.i-10 умноженное на 20.
 
-let inputIn10 = document.querySelector(".i-10");
 let div10 = document.querySelector(".out-10");
 
 function t10() {
@@ -94,7 +93,7 @@ function t10() {
     `Зафиксировано нажатие на кнопке, в инпуте было значение ${data10}`
   );
   div10.innerHTML = data10 * 20;
-  inputIn10.value = "";
+  data10.value = "";
 }
 
 document.querySelector(".b-10").onclick = t10;
@@ -102,7 +101,7 @@ document.querySelector(".b-10").onclick = t10;
 // Task 11.
 // По нажатию на кнопку .b-11 выполняется функция t11, которая выводит на страницу в .out-11 число, которое ввел пользователь в i-11 и к нему добавленное число 55. В этой задаче мы не приводим к числу полученное из input.
 
-let inputIn11 = document.querySelector(".i-11");
+
 let div11 = document.querySelector(".out-11");
 
 function t11() {
@@ -112,7 +111,7 @@ function t11() {
     `Зафиксировано нажатие на кнопке, в инпуте было значение ${data11}`
   );
   div11.innerHTML = data11 + "+55";
-  inputIn10.value = "";
+  data11.value = "";
 }
 
 document.querySelector(".b-11").onclick = t11;
@@ -120,9 +119,6 @@ document.querySelector(".b-11").onclick = t11;
 // Task 12.
 // По нажатию на кнопку выполняется функция t12. Функция должна получить данные из input i.12-1 и i.12-2 (пользователь вводин в них фамилию и имя). После чего вывести в .out-12  строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия. Обращаю ваше внимание - с этого момента мы работаем строго по заданию. Hello - с большой буквы. Между Hello имя один пробел (вы же включили отображение пробелов?). Вы не добавляете "от себя" - запятые, любые другие слова и символы. Аналогичные правила действуют и дальше по курсу.
 
-// let inputIn12I = document.querySelector(".i-12-1");
-// let inputIn12F = document.querySelector(".i-12-2");
-// let div12 = document.querySelector(".out-12");
 
 function t12() {
   let dataImya = document.querySelector(".i-12-1").value;
@@ -175,7 +171,7 @@ function t16() {
   console.log("зафиксировано нажатие кнопки");
   let a16 = document.querySelector(".i-16-1").value;
   let b16 = document.querySelector(".i-16-2").value;
-  document.querySelector(".out-16").innerHTML = a16 + "+" + b16;
+  document.querySelector(".out-16").innerHTML = a16 + b16;
 }
 
 document.querySelector(".b-16").onclick = t16;
@@ -195,14 +191,23 @@ document.querySelector(".b-17").onclick = t17;
 // Task 18.
 //  По нажатию на кнопку .b-18 выполняется функция t18. Функция получает из .i-18 число в переменную a. Выводит в out-18 результат операции parseFloat(a). Попробуйте ввести значения 5, 33.02, 33.9a, -20.01
 
-function t18() {}
+function t18() {
+    console.log("зафиксировано нажатие кнопки");
+    let a = document.querySelector(".i-18").value;
+    document.querySelector(".out-18").innerHTML = parseFloat(a);
+}
 
 document.querySelector(".b-18").onclick = t18;
 
 // Task 19.
 // По нажатию кнопки .b-19 функция t19 дожна в out-19 вывести сумму двух отрицательных чисел из input .i-19-1 и .i-19-2.
 
-function t19() {}
+function t19() {
+    console.log("зафиксировано нажатие кнопки");
+    let a = +document.querySelector(".i-19-1").value;
+    let b = +document.querySelector(".i-19-2").value;
+    document.querySelector(".out-19").innerHTML = a + b;
+}
 
 document.querySelector(".b-19").onclick = t19;
 
@@ -212,8 +217,10 @@ document.querySelector(".b-19").onclick = t19;
 let count = 0;
 
 function t20() {
-  count = count + 1; // можно сократить count++
-  // тут допишите вывод в out-20
+    console.log("зафиксировано нажатие кнопки");
+  count ++; // можно сократить count++
+  
+  document.querySelector(".out-20").innerHTML = count;
 }
 
 document.querySelector(".b-20").onclick = t20;
