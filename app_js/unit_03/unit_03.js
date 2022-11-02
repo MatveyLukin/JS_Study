@@ -35,12 +35,12 @@ document.querySelector(".b-2").onclick = f2;
 
 function f3() {
   console.log("зафиксировано нажатие кнопки");
-  let a31 = +document.querySelector(".i-31").value;
-  let b31 = +document.querySelector(".i-32").value; // выяснить про +!!!!!!!!!!!!!!
-  if (a31 > b31) {
-    document.querySelector(".out-3").textContent = a31;
+  let a = +document.querySelector(".i-31").value;
+  let b = +document.querySelector(".i-32").value;  
+  if (a > b) {
+    document.querySelector(".out-3").textContent = a;
   } else {
-    document.querySelector(".out-3").textContent = b31;
+    document.querySelector(".out-3").textContent = b;
   }
 }
 
@@ -51,7 +51,7 @@ document.querySelector(".b-3").onclick = f3;
 
 function f4() {
   console.log("зафиксировано нажатие кнопки");
-  let dateBorn = document.querySelector(".i-4").value;
+  let dateBorn = +document.querySelector(".i-4").value;
   let age = 2022 - dateBorn;
   if (age >= 18) {
     document.querySelector(".out-4").textContent = 1;
@@ -67,7 +67,7 @@ document.querySelector(".b-4").onclick = f4;
 
 function f5() {
   console.log("зафиксировано нажатие кнопки");
-  let a = document.querySelector(".i-5").value;
+  let a = +document.querySelector(".i-5").value;
   if (a < 0) {
     document.querySelector(".out-5").textContent = "m";
   } else if (a > 0) {
@@ -84,8 +84,8 @@ document.querySelector(".b-5").onclick = f5;
 
 function f6() {
   console.log("зафиксировано нажатие кнопки");
-  let a6 = document.querySelector(".i-6").value;
-  if (a6 % 2 == 0) {
+  let a = +document.querySelector(".i-6").value;
+  if (a % 2 == 0) {
     document.querySelector(".out-6").textContent = "even";
   } else {
     document.querySelector(".out-6").textContent = "odd";
@@ -99,10 +99,10 @@ document.querySelector(".b-6").onclick = f6;
 
 function f7() {
   console.log("зафиксировано нажатие кнопки");
-  let a71 = +document.querySelector(".i-71").value;
-  let b71 = +document.querySelector(".i-72").value;
-  //  document.querySelector(".out-7").innerHTML = a71 ** b71; // попробовал два варианта
-  document.querySelector(".out-7").innerHTML = Math.pow(a71, b71);
+  let a = +document.querySelector(".i-71").value;
+  let b = +document.querySelector(".i-72").value;
+  //  document.querySelector(".out-7").innerHTML = a ** b; // попробовал два варианта
+  document.querySelector(".out-7").innerHTML = Math.pow(a, b);
 }
 
 document.querySelector(".b-7").onclick = f7;
@@ -137,7 +137,7 @@ document.querySelector(".b-8").onclick = f8;
 
 function f9() {
   console.log("зафиксировано нажатие кнопки");
-  let flatNumber = document.querySelector(".i-9").value;
+  let flatNumber = +document.querySelector(".i-9").value;
   if (flatNumber >= 1 && flatNumber <= 32) {
     document.querySelector(".out-9").textContent = 1;
   } else if (flatNumber >= 33 && flatNumber <= 43) {
@@ -156,8 +156,8 @@ document.querySelector(".b-9").onclick = f9;
 
 function f10() {
   console.log("зафиксировано нажатие кнопки");
-  let S100 = document.querySelector(".s-100").value; // с + тоже вопросы?
-  document.querySelector(".out-10").textContent = S100;
+  let select = document.querySelector(".s-100").value; 
+  document.querySelector(".out-10").textContent = select;
 }
 
 document.querySelector(".b-10").onclick = f10;
@@ -167,8 +167,8 @@ document.querySelector(".b-10").onclick = f10;
 
 function f11() {
   console.log("зафиксировано нажатие кнопки");
-  let S110 = document.querySelector(".s-110").value; // с + тоже вопросы?
-  document.querySelector(".out-11").textContent = S110;
+  let select = document.querySelector(".s-110").value; 
+  document.querySelector(".out-11").textContent = select;
 }
 
 document.querySelector(".s-110").onchange = f11;
@@ -189,7 +189,7 @@ document.querySelector(".b-12").onclick = f12;
 // Дан input i-130. В отличие от предыдущего задания - input type number. По нажатию кнопки получите значение из input  в переменную, а затем выведите в out-13 typeof полученной переменной. Typeof позволяет определить тип данных. Если вы правильно все сделали - то удивительно, но тип данных будет string! Подумайте почему так?
 
 function f13() {
-  let I130 = +document.querySelector(".i-130").value;
+  let I130 = document.querySelector(".i-130").value;
   document.querySelector(".out-13").innerHTML = typeof I130;
 }
 document.querySelector(".b-13").onclick = f13;
@@ -199,22 +199,22 @@ document.querySelector(".b-13").onclick = f13;
 
 function f14() {
   console.log("зафиксировано нажатие кнопки");
-  let a14 = +document.querySelector(".i-141").value;
-  let b14 = +document.querySelector(".i-142").value;
-  let S140 = document.querySelector(".s-143").value;
-  let out14 = document.querySelector(".out-14");
-  switch (S140) {
+  let a = +document.querySelector(".i-141").value;
+  let b = +document.querySelector(".i-142").value;
+  let select = document.querySelector(".s-143").value;
+  let out = document.querySelector(".out-14");
+  switch (select) {
     case "+":
-      out14.innerHTML = a14 + b14;
+      out.innerHTML = a + b;
       break;
     case "-":
-      out14.innerHTML = a14 - b14;
+      out.innerHTML = a - b;
       break;
     case "*":
-      out14.innerHTML = a14 * b14;
+      out.innerHTML = a * b;
       break;
     case "/":
-      out14.innerHTML = a14 / b14;
+      out.innerHTML = a / b;
       break;
   }
 }
@@ -226,16 +226,16 @@ document.querySelector(".b-14").onclick = f14;
 
 function f15() {
   console.log("зафиксировано нажатие кнопки");
-  let a15 = +document.querySelector(".s-151").value;
-  let b15 = +document.querySelector(".s-152").value;
-  let S150 = document.querySelector(".s-153").value;
-  let out15 = document.querySelector(".out-15");
-  switch (S150) {
+  let a = +document.querySelector(".s-151").value;
+  let b = +document.querySelector(".s-152").value;
+  let select = document.querySelector(".s-153").value;
+  let out = document.querySelector(".out-15");
+  switch (select) {
     case "&&":
-      out15.innerHTML = a15 && b15;
+      out.innerHTML = a && b;
       break;
     case "||":
-      out15.innerHTML = a15 || b15;
+      out.innerHTML = a || b;
       break;
   }
 }
