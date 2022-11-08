@@ -29,10 +29,8 @@ document.querySelector(".p-3").onclick = f3;
 // При клике по кнопке .b-4 запускается функция f4. Функция проверяет состояние .i-4 и если он checked - выводит true, если не выбран - false. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае - div.out-4
 
 function f4() {
-  console.log("зафиксировано нажатие кнопки");
   let a = document.querySelector(".i-4");
   if (a.checked) {
-    console.log("pushed");
     document.querySelector("div.out-4").textContent = true;
   } else {
     document.querySelector("div.out-4").textContent = false;
@@ -45,10 +43,8 @@ document.querySelector(".b-4").onclick = f4;
 // При клике по кнопке .b-5 запускается функция f5. Функция проверяет состояние .i-5 и если он checked - выводит value данного элемента, если не выбран - false. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-5
 
 function f5() {
-  console.log("зафиксировано нажатие кнопки");
   let a = document.querySelector(".i-5");
   if (a.checked) {
-    console.log("pushed");
     document.querySelector("div.out-5").textContent = a.value;
   } else {
     document.querySelector("div.out-5").textContent = false;
@@ -61,7 +57,6 @@ document.querySelector(".b-5").onclick = f5;
 // При нажатии на кнопку выводите value из input.i-6 в div.out-6. Обратите внимание, что даже скрытый hidden input - нам не помеха.
 
 function f6() {
-  console.log("зафиксировано нажатие кнопки");
   let a = document.querySelector(".i-6");
   document.querySelector("div.out-6").textContent = a.value;
 }
@@ -72,7 +67,6 @@ document.querySelector(".b-6").onclick = f6;
 // При нажатии на кнопку выводите в div.out-71 value прописанное в input .i-7. В .out-72 выводите 1 если длина пароля больше или равна 6 или 0 если меньше. Для подсчета количества символов в строке используйте length.
 
 function f7() {
-  console.log("зафиксировано нажатие кнопки");
   let a = document.querySelector(".i-7").value;
   document.querySelector("div.out-71").textContent = a;
   if (a.length >= 6) {
@@ -87,7 +81,6 @@ document.querySelector(".b-7").onclick = f7;
 // При нажатии кнопки .b-8 запускается функция f8. Функция с помощью innerHTML создает в .out-8 новый div с классом js2 и текстом new div. Нажали несколько раз? Создаем несколько раз!
 
 function f8() {
-  console.log("зафиксировано нажатие кнопки");
   let out8 = document.querySelector(".out-8");
   out8.innerHTML = '<div class="js2">new div</div>';
 }
@@ -98,10 +91,8 @@ document.querySelector(".b-8").onclick = f8;
 // При нажатии кнопки .b-9 запускаем функцию f9. Функция проверяет checked элемента .r-9. Если элемент выбран (checked) то выводит в .out-9 value radiobutton. Если не выбран - выводит false.
 
 function f9() {
-  console.log("зафиксировано нажатие кнопки");
   let a = document.querySelector(".r-9");
   if (a.checked) {
-    console.log("pushed");
     document.querySelector(".out-9").textContent = a.value;
   } else {
     document.querySelector(".out-9").textContent = false;
@@ -134,7 +125,6 @@ document.querySelector(".b-11").onclick = f11;
 // При нажатии кнопки .b-12 запускается функция f12. Функция выводит дату из .i-12 в out-12.
 
 function f12() {
-  console.log("зафиксировано нажатие кнопки");
   let date = document.querySelector(".i-12").value;
   document.querySelector(".out-12").textContent = date;
 }
@@ -145,7 +135,6 @@ document.querySelector(".b-12").onclick = f12;
 //  При изменении положения ползунка .i-13 выводите его значение в out-13. Обратите внимание на событие.
 
 function f13() {
-  console.log("зафиксировано нажатие кнопки");
   let range = document.querySelector(".i-13").value;
   document.querySelector(".out-13").textContent = range;
 }
@@ -156,7 +145,6 @@ document.querySelector(".i-13").oninput = f13;
 // При нажатии на кнопку выводите текст из textarea .t-14 в .out-14.
 
 function f14() {
-  console.log("зафиксировано нажатие кнопки");
   let greeting = document.querySelector(".t-14").value;
   document.querySelector(".out-14").textContent = greeting;
 }
@@ -167,7 +155,6 @@ document.querySelector(".b-14").onclick = f14;
 // При нажатии кнопки .b-15 функция должна выводить текст из .i-15 в textarea .t-15 и в .out-15.
 
 function f15() {
-  console.log("зафиксировано нажатие кнопки");
   let text = document.querySelector(".i-15").value;
   document.querySelector(".t-15").textContent = text;
   document.querySelector(".out-15").textContent = text;
@@ -179,7 +166,6 @@ document.querySelector(".b-15").onclick = f15;
 // При нажатии на кнопку .b-16 выводите в .out-16 value выбранного option из .s-16.
 
 function f16() {
-  console.log("зафиксировано нажатие кнопки");
   let select = document.querySelector(".s-16").value;
   document.querySelector(".out-16").textContent = select;
   // для получения выбранного option просто получите select в переменную и select.value;
@@ -191,7 +177,6 @@ document.querySelector(".b-16").onclick = f16;
 // При смене выбранного значения .s-17 выводите в .out-17 value выбранного option из .s-17.
 
 function f17() {
-  console.log("зафиксировано нажатие кнопки");
   let select = document.querySelector(".s-17").value;
   document.querySelector(".out-17").textContent = select;
 }
@@ -202,7 +187,6 @@ document.querySelector(".s-17").onchange = f17;
 // При смене выбранного значения в s-18, получайте из него value выбранного option и присвойте данный value в input .i-18.
 
 function f18() {
-  console.log("зафиксировано нажатие кнопки");
   let select = document.querySelector(".s-18").value;
   document.querySelector(".i-18").value = select;
 }
@@ -213,7 +197,6 @@ document.querySelector(".s-18").onchange = f18;
 // На странице создан div.out-19. По нажатию кнопки, получите из него текст и присвойте в value элемента .i-19.
 
 function f19() {
-  console.log("зафиксировано нажатие кнопки");
   let text = document.querySelector(".out-19").textContent;
   document.querySelector(".i-19").value = text;
 }
