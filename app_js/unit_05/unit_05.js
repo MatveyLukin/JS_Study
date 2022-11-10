@@ -56,7 +56,7 @@ document.querySelector(".b-3").onclick = t3;
 
 function t4() {
   let out = "";
-  
+
   for (let i = 77; i > 34; i = i - 3) {
     out += i + "_";
   }
@@ -96,7 +96,14 @@ document.querySelector(".b-5").onclick = t5;
 //Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек. Перенос строки - br. Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
 //
 
-function t6() {}
+function t6() {
+  let stringQnt = +document.querySelector(".i-6").value;
+  let out = "";
+  for (let i = 0; i < stringQnt; i++) {
+    out += "******<br>";
+  }
+  document.querySelector(".out-6").innerHTML = out;
+}
 
 document.querySelector(".b-6").onclick = t6;
 
@@ -107,7 +114,14 @@ document.querySelector(".b-6").onclick = t6;
 // 4_3_2_1_0_
 // Задача решается с помощью цикла.
 
-function t7() {}
+function t7() {
+  let a = +document.querySelector(".i-7").value;
+  let out = "";
+  for (let i = a; i >= 0; i--) {
+    out += i + "_";
+  }
+  document.querySelector(".out-7").innerHTML = out;
+}
 
 document.querySelector(".b-7").onclick = t7;
 
@@ -119,7 +133,15 @@ document.querySelector(".b-7").onclick = t7;
 //  4_5_6_7_8_
 // Задача решается с помощью цикла.
 
-function t8() {}
+function t8() {
+  let inputTop = +document.querySelector(".i-81").value;
+  let inputBottom = +document.querySelector(".i-82").value;
+  let out = "";
+  for (let i = inputTop; i <= inputBottom; i++) {
+    out += i + "_";
+  }
+  document.querySelector(".out-8").innerHTML = out;
+}
 
 document.querySelector(".b-8").onclick = t8;
 
