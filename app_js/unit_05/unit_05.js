@@ -229,7 +229,12 @@ document.querySelector(".b-12").onclick = t12;
 //  Task 13
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
 
-function t13() {}
+function t13() {
+  let divs13 = document.getElementsByClassName("i-13");
+  for (let i = 0; i < divs13.length; i++) {
+    divs13[i].value += 1 + i;
+  }
+}
 
 document.querySelector(".b-13").onclick = t13;
 
@@ -239,7 +244,16 @@ document.querySelector(".b-13").onclick = t13;
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14() {
+  let out = "";
+  let inputR = document.getElementsByClassName("i-14");
+  for (let i = 0; i < inputR.length; i++) {
+    if (inputR[i].checked) {
+      out = inputR[i].value;
+    }
+    document.querySelector(".out-14").innerHTML = out;
+  }
+}
 
 document.querySelector(".b-14").onclick = t14;
 
@@ -248,6 +262,13 @@ document.querySelector(".b-14").onclick = t14;
 // 10_0_9_1_8_2_7_3_6_4_5_5_4_6_3_7_2_8_1_9_0_10_
 // Подсказка (10 - i) + '_' + i + '_'
 
-function t15() {}
+function t15() {
+  let out = "";
+
+  for (let i = 77; i > 34; i = i - 3) {
+    out += i + "_";
+  }
+  document.querySelector(".out-15").innerHTML = out;
+}
 
 document.querySelector(".b-15").onclick = t15;
