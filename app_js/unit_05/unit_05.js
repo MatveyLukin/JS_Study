@@ -155,7 +155,23 @@ document.querySelector(".b-8").onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
 // цикл - один
 
-function t9() {}
+function t9() {
+  let inputTop = +document.querySelector(".i-91").value;
+  let inputBottom = +document.querySelector(".i-92").value;
+  let out = "";
+
+  if (inputTop < inputBottom) {
+    for (let i = inputTop; i <= inputBottom; i++) {
+      out += i + "_";
+    }
+  } else {
+    for (let i = inputBottom; i <= inputTop; i++) {
+      out += i + "_";
+    }
+  }
+
+  document.querySelector(".out-9").innerHTML = out;
+}
 
 document.querySelector(".b-9").onclick = t9;
 
@@ -163,7 +179,15 @@ document.querySelector(".b-9").onclick = t9;
 // Кнопка .b-10 запускает функцию t10. Функция должна выводить в .out-10 четные годы от 1950 до 1970 включительно.
 // Разделитель - знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10() {
+  let year = "";
+
+  for (let i = 1950; i <= 1970; i = i + 2) {
+    year += i + "_";
+  }
+
+  document.querySelector(".out-10").innerHTML = year;
+}
 
 document.querySelector(".b-10").onclick = t10;
 
@@ -175,7 +199,15 @@ document.querySelector(".b-10").onclick = t10;
 //     В результате должно получиться так:
 //     one_3_4_two_
 
-function t11() {}
+function t11() {
+  let out = "";
+  let divs11 = document.getElementsByClassName("div-11");
+  for (let i = 0; i < divs11.length; i++) {
+    out += divs11[i].innerHTML + "_";
+  }
+
+  document.querySelector(".out-11").innerHTML = out;
+}
 
 document.querySelector(".b-11").onclick = t11;
 
@@ -185,7 +217,12 @@ document.querySelector(".b-11").onclick = t11;
 // перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-function t12() {}
+function t12() {
+  let divs12 = document.getElementsByClassName("div-12");
+  for (let i = 0; i < divs12.length; i++) {
+    divs12[i].style.background = "orange";
+  }
+}
 
 document.querySelector(".b-12").onclick = t12;
 
