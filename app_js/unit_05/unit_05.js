@@ -265,8 +265,8 @@ document.querySelector(".b-14").onclick = t14;
 function t15() {
   let out = "";
 
-  for (let i = 77; i > 34; i = i - 3) {
-    out += i + "_";
+  for (let i = 10; i >= 0; i--) {
+    out += i + "_" + 10 - i + "_";
   }
   document.querySelector(".out-15").innerHTML = out;
 }
