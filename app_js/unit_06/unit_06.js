@@ -52,13 +52,15 @@ document.querySelector(".b-2").onclick = t2;
 
 // <p>Решить задачу с помощью вложенных циклов. Внутренний цикл выводит *_,  внешний цикл выводит перенос строки br.</p>
 function t3() {
-  let out = document.querySelector(".out-3");
+  let out3 = document.querySelector(".out-3");
+  let out = "";
   for (let i = 1; i <= 4; i++) {
     for (let k = 1; k <= 3; k++) {
       out += "*_";
     }
     out += "<br>";
   }
+  out3.innerHTML = out;
 }
 
 document.querySelector(".b-3").onclick = t3;
@@ -68,13 +70,15 @@ document.querySelector(".b-3").onclick = t3;
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 // Внешний цикл выводит цифру и _, а внутренний выводит от 1 до 5 с *
 function t4() {
-  let out = document.querySelector(".out-4");
+  let out4 = document.querySelector(".out-4");
+  let out = "";
   for (let i = 1; i <= 3; i++) {
     out += i + "_";
     for (let k = 1; k <= 5; k++) {
       out += k + "*";
     }
   }
+  out4.innerHTML = out;
 }
 
 document.querySelector(".b-4").onclick = t4;
@@ -100,7 +104,7 @@ function t5() {
     }
     out += "<br>";
   }
-  out5out = out;
+  out5.innerHTML = out;
 }
 
 document.querySelector(".b-5").onclick = t5;
@@ -129,7 +133,7 @@ function t6() {
     out += "<br>";
   }
 
-  out6out = out;
+  out6.innerHTML = out;
 }
 
 document.querySelector(".b-6").onclick = t6;
@@ -142,7 +146,18 @@ document.querySelector(".b-6").onclick = t6;
 // ***
 // ****
 
-function t7() {}
+function t7() {
+  let out7 = document.querySelector(".out-7");
+  let out = "";
+  for (let i = 1; i <= 4; i++) {
+    for (let k = 1; k <= i; k++) {
+      out += "*";
+    }
+    out += "<br>";
+    console.log(out);
+  }
+  out7.innerHTML = out;
+}
 
 document.querySelector(".b-7").onclick = t7;
 
@@ -156,7 +171,18 @@ document.querySelector(".b-7").onclick = t7;
 // **
 // *
 
-function t8() {}
+function t8() {
+  let out8 = document.querySelector(".out-8");
+  let out = "";
+  for (let i = 5; i >= 0; i--) {
+    for (let k = 0; k <= i; k++) {
+      out += "*";
+    }
+    out += "<br>";
+    console.log(out);
+  }
+  out8.innerHTML = out;
+}
 
 document.querySelector(".b-8").onclick = t8;
 

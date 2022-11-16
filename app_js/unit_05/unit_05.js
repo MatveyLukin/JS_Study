@@ -266,7 +266,7 @@ function t15() {
   let out = "";
 
   for (let i = 10; i >= 0; i--) {
-    out += i + "_" + 10 - i + "_";
+    out += i + "_" + (10 - i) + "_";
   }
   document.querySelector(".out-15").innerHTML = out;
 }
