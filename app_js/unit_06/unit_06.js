@@ -195,7 +195,21 @@ document.querySelector(".b-8").onclick = t8;
 // 1_2_3_4_
 // 1_2_3_4_5_
 
-function t9() {}
+function t9() {
+  let out9 = document.querySelector(".out-9");
+  let out = "";
+
+  for (let i = 1; i <=5; i++) {
+    for (let k = 1; k <=i; k++) {
+      out += k + "_";
+      
+    }
+    out += '<br>';
+    
+  }
+
+  out9.innerHTML = out;
+}
 
 document.querySelector(".b-9").onclick = t9;
 
@@ -208,6 +222,23 @@ document.querySelector(".b-9").onclick = t9;
 //31_32_33_34_35_36_37_38_39_40_
 //41_42_43_44_45_46_47_48_49_50_
 
-function t10() {}
+function t10() {
+  let out10 = document.querySelector(".out-10");
+  let out = "";
+  for (let i = 0; i <=4; i++) {
+    for (let k = 1; k <= 10; k++) {
+      if(k > 0 && k <= 9) {
+      out += [i] + k + "_";}
+      else {
+      out += (i + 1) + "0" + "_"; 
+      }
+      
+    }
+    out += '<br>';
+    console.log(out);
+  }
+
+  out10.innerHTML = out;
+}
 
 document.querySelector(".b-10").onclick = t10;
