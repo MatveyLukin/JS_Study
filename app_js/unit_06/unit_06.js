@@ -175,7 +175,7 @@ function t8() {
   let out8 = document.querySelector(".out-8");
   let out = "";
   for (let i = 5; i >= 0; i--) {
-    for (let k = 0; k <= i; k++) {
+    for (let k = i; k >= 1; k--) {
       out += "*";
     }
     out += "<br>";
