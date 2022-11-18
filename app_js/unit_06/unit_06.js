@@ -154,7 +154,6 @@ function t7() {
       out += "*";
     }
     out += "<br>";
-    console.log(out);
   }
   out7.innerHTML = out;
 }
@@ -174,12 +173,11 @@ document.querySelector(".b-7").onclick = t7;
 function t8() {
   let out8 = document.querySelector(".out-8");
   let out = "";
-  for (let i = 5; i >= 0; i--) {
+  for (let i = 5; i > 0; i--) {
     for (let k = i; k >= 1; k--) {
       out += "*";
     }
     out += "<br>";
-    console.log(out);
   }
   out8.innerHTML = out;
 }
@@ -199,15 +197,12 @@ function t9() {
   let out9 = document.querySelector(".out-9");
   let out = "";
 
-  for (let i = 1; i <=5; i++) {
-    for (let k = 1; k <=i; k++) {
+  for (let i = 1; i <= 5; i++) {
+    for (let k = 1; k <= i; k++) {
       out += k + "_";
-      
     }
-    out += '<br>';
-    
+    out += "<br>";
   }
-
   out9.innerHTML = out;
 }
 
@@ -225,19 +220,19 @@ document.querySelector(".b-9").onclick = t9;
 function t10() {
   let out10 = document.querySelector(".out-10");
   let out = "";
-  for (let i = 0; i <=4; i++) {
+  for (let i = 0; i <= 4; i++) {
     for (let k = 1; k <= 10; k++) {
-      if(k > 0 && k <= 9) {
-      out += [i] + k + "_";}
-      else {
-      out += (i + 1) + "0" + "_"; 
+      if (k > 0 && k <= 9) {
+        out += [i] + k + "_";
       }
-      
+      // out += i.toString() + k.toString() + "_";} // ещё один способ нашёл
+      else {
+        // out += i + 1 + "0" + "_";
+        out += i + 1 + "0" + "_";
+      }
     }
-    out += '<br>';
-    console.log(out);
+    out += "<br>";
   }
-
   out10.innerHTML = out;
 }
 
