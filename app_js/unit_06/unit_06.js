@@ -95,7 +95,7 @@ function t5() {
   let out5 = document.querySelector(".out-5");
   let out = "";
   for (let i = 1; i <= 3; i++) {
-    for (let k = 1; k <= 5; k++) {
+    for (let k = 1; k <= 6; k++) {
       if (k % 2 == 0) {
         out += 0;
       } else {
