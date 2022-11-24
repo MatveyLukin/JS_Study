@@ -119,7 +119,7 @@ function t6() {
     out += "<br>";
     i++;
   }
-  out6.textContent = out;
+  out6.innerHTML = out;
 }
 
 document.querySelector(".b-6").onclick = t6;
@@ -131,7 +131,21 @@ document.querySelector(".b-6").onclick = t6;
 //     4_3_2_1_0_
 // Задача решается с помощью цикла  while.
 
-function t7() {}
+function t7() {
+  let num = +document.querySelector(".i-7").value;
+  let out7 = document.querySelector(".out-7");
+  let out = "";
+  
+
+  while (num >= 0) {
+    out += num + "_";
+    num--;
+    console.log(out);
+  }
+
+  out7.innerHTML = out;
+
+}
 
 document.querySelector(".b-7").onclick = t7;
 
@@ -143,7 +157,18 @@ document.querySelector(".b-7").onclick = t7;
 //     4_5_6_7_8_
 // Задача решается с помощью цикла  while.
 
-function t8() {}
+function t8() {
+  let num1 = +document.querySelector(".i-81").value;
+  let num2 = +document.querySelector(".i-82").value;
+  let out8 = document.querySelector(".out-8");
+  let out = "";
+
+  while (num1 <= num2) {
+    out += num1 + "_";
+    num1++;    
+  }
+  out8.innerHTML = out;
+}
 
 document.querySelector(".b-8").onclick = t8;
 
