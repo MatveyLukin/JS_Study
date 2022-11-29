@@ -135,16 +135,13 @@ function t7() {
   let num = +document.querySelector(".i-7").value;
   let out7 = document.querySelector(".out-7");
   let out = "";
-  
 
   while (num >= 0) {
     out += num + "_";
     num--;
-    console.log(out);
   }
 
   out7.innerHTML = out;
-
 }
 
 document.querySelector(".b-7").onclick = t7;
@@ -165,7 +162,7 @@ function t8() {
 
   while (num1 <= num2) {
     out += num1 + "_";
-    num1++;    
+    num1++;
   }
   out8.innerHTML = out;
 }
@@ -181,7 +178,25 @@ document.querySelector(".b-8").onclick = t8;
 // 6_7_8_
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
-function t9() {}
+function t9() {
+  let num1 = +document.querySelector(".i-91").value;
+  let num2 = +document.querySelector(".i-92").value;
+  let out9 = document.querySelector(".out-9");
+  let out = "";
+
+  if (num1 > num2) {
+    let t = num2;
+    num2 = num1;
+    num1 = t;
+  }
+
+  while (num1 <= num2) {
+    out += num1 + "_";
+    num1++;
+  }
+
+  out9.innerHTML = out;
+}
 
 document.querySelector(".b-9").onclick = t9;
 
@@ -189,7 +204,18 @@ document.querySelector(".b-9").onclick = t9;
 // Кнопка .b-10 запускает функцию t10. Функция должна выводить в .out-10 четные годы от 1950 до 1966 включительно.
 // Разделитель знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10() {
+  let out10 = document.querySelector(".out-10");
+  let out = "";
+  let year = 1950;
+
+  while (year <= 1966) {
+    out += year + "_";
+    year = year + 2;
+  }
+
+  out10.innerHTML = out;
+}
 
 document.querySelector(".b-10").onclick = t10;
 
@@ -201,7 +227,19 @@ document.querySelector(".b-10").onclick = t10;
 //     В результате должно получиться так:
 //     one_3_4_two_
 
-function t11() {}
+function t11() {
+  let out11 = document.querySelector(".out-11");
+  let out = "";
+  let divs11 = document.querySelectorAll(".div-11");
+  let i = 0;
+
+  while (i < divs11.length) {
+    out += divs11[i].innerHTML + "_";
+    i++;
+  }
+
+  out11.innerHTML = out;
+}
 
 document.querySelector(".b-11").onclick = t11;
 
@@ -211,7 +249,15 @@ document.querySelector(".b-11").onclick = t11;
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = 'orange'
 
-function t12() {}
+function t12() {
+  let divs12 = document.querySelectorAll(".div-12");
+  let i = 0;
+
+  while (i < divs12.length) {
+    divs12[i].style.background = "orange";
+    i++;
+  }
+}
 
 document.querySelector(".b-12").onclick = t12;
 
@@ -221,7 +267,15 @@ document.querySelector(".b-12").onclick = t12;
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
-function t13() {}
+function t13() {
+  let divs13 = document.querySelectorAll(".i-13");
+  let i = 0;
+
+  while (i < divs13.length) {
+    divs13[i].value += 1 + i;
+    i++;
+  }
+}
 
 document.querySelector(".b-13").onclick = t13;
 
@@ -231,7 +285,19 @@ document.querySelector(".b-13").onclick = t13;
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14() {
+  let out = "";
+  let inputR = document.querySelectorAll(".i-14");
+  let i = 0;
+
+  while (i < inputR.length) {
+    if (inputR[i].checked) {
+      out = inputR[i].value;
+    }
+    i++;
+  }
+  document.querySelector(".out-14").innerHTML = out;
+}
 
 document.querySelector(".b-14").onclick = t14;
 
@@ -240,6 +306,20 @@ document.querySelector(".b-14").onclick = t14;
 // 77_88_99_77_88_99_77_88_99_
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
-function t15() {}
+function t15() {
+  let out = "";
+  let i = 0;
+
+  while (i < 3) {
+    let k = 77;
+    while (k <= 99) {
+      out += k + "_";
+      k = k + 11;
+    }
+    i++;
+  }
+
+  document.querySelector(".out-15").innerHTML = out;
+}
 
 document.querySelector(".b-15").onclick = t15;
