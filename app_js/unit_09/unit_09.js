@@ -54,7 +54,6 @@ document.querySelector(".b-5").onclick = f5;
 
 function f6() {
   let out6 = document.querySelectorAll(".p-6");
-  console.log(out6);
   document.querySelector(".out-6").textContent = out6.length;
 }
 
@@ -67,7 +66,7 @@ let blocks7 = document.querySelectorAll(".out-7");
 
 function f7() {
   for (let i = 0; i < blocks7.length; i++) {
-    blocks7[i].classList.add("bg-orange"); //в чём разница между toggle&add?
+    blocks7[i].classList.add("bg-orange");
   }
 }
 
@@ -111,8 +110,6 @@ function f10() {
 for (let i = 0; i < div10.length; i++) {
   div10[i].onclick = f10;
 }
-
-// а тут цикл, похожий на предыдущее задание
 
 //  Task 11
 // Кнопка .b-11, запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в .out-11.
@@ -166,7 +163,7 @@ function f14() {
   let div = document.createElement("div");
   div.textContent = "14";
   div.classList.add("bg-orange");
-  out14.append("div");
+  out14.append(div);
 }
 
 document.querySelector(".b-14").onclick = f14;
@@ -179,7 +176,7 @@ function f15() {
   let div = document.createElement("div");
   div.textContent = "15";
   div.classList.add("bg-orange");
-  out15.before("div");
+  out15.before(div);
 }
 
 document.querySelector(".b-15").onclick = f15;
@@ -187,34 +184,61 @@ document.querySelector(".b-15").onclick = f15;
 //  Task 16
 // Кнопкa .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом 16 и добавляет ему класс .bg-orange. Созданный div добавляется после .out-16 с помощью after.
 
-function f16() {}
+function f16() {
+  let out16 = document.querySelector(".out-16");
+  let div = document.createElement("div");
+  div.textContent = "16";
+  div.classList.add("bg-orange");
+  out16.after(div);
+}
 
 document.querySelector(".b-16").onclick = f16;
 
 //  Task 17
 // Кнопкa .b-17, которая запускает функцию f17. Функция создает через createElement div c текстом 17 и добавляет ему класс .bg-orange. Созданный div заменяет .out-17 с помощью replaceWith.
 
-function f17() {}
+function f17() {
+  let out17 = document.querySelector(".out-17");
+  let div = document.createElement("div");
+  div.textContent = "17";
+  div.classList.add("bg-orange");
+  out17.replaceWith(div);
+}
 
 document.querySelector(".b-17").onclick = f17;
 
 //  Task 18
 // Кнопкa .b-18, которая запускает функцию f18. Функция с помощью getAttribute получает data-b атрибут с параграф .p-18 и выводит в .out-18.
 
-function f18() {}
+function f18() {
+  let out18 = document.querySelector(".out-18");
+  let p = document.querySelector(".p-18").getAttribute("data-b");
+  out18.innerHTML = p;
+}
 
 document.querySelector(".b-18").onclick = f18;
 
 //  Task 19
 // Кнопкa .b-19, которая запускает функцию f19. Функция с помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит в .out-19 через пробел. Обратите внимание, что элементов .p-19 больше одного.
 
-function f19() {}
+function f19() {
+  let out19 = document.querySelector(".out-19");
+  let p = document.querySelectorAll(".p-19");
+  let out = "";
+  for (let i = 0; i < p.length; i++) {
+    out += p[i].getAttribute("data-b") + " ";
+  }
+  out19.textContent = out;
+}
 
 document.querySelector(".b-19").onclick = f19;
 
 //  Task 20
 // Кнопкa .b-20, которая запускает функцию f20. Функция с помощью setAttribute присваивает атрибут title="go" в div.out-20. Обращаю ваше внимание - увидеть атрибут можно только в с помощью инструментов веб разработчика.
 
-function f20() {}
+function f20() {
+  let out = document.querySelector(".out-20");
+  out.setAttribute("title", "go");
+}
 
 document.querySelector(".b-20").onclick = f20;
