@@ -14,6 +14,7 @@ let d1 = [33, "best", 66, "best"];
 function f1() {
   let i = document.querySelector(".i-1").value;
   d1.push(i);
+  console.log(d1);
 
   showArr(".out-1", d1);
 }
@@ -26,6 +27,7 @@ document.querySelector(".b-1").onclick = f1;
 
 function f2() {
   d1.pop();
+  console.log(d1);
   showArr(".out-2", d1);
 }
 
@@ -95,6 +97,14 @@ document.querySelector(".b-6").onclick = f6;
 let d7 = ["china", "india", "brazil", "japan", "egypt"];
 
 function f7() {
+  // d7.length = d7.length - 1;  // попробовал каждый способ
+  // console.log(d7);
+  t = [];
+  for (let i = 0; i < d7.length - 1; i++) {
+      t.push(d7[i]);    
+  }
+  d7 = t;
+  console.log(d7);
   showArr(".out-7", d7);
 }
 
@@ -109,6 +119,15 @@ document.querySelector(".b-7").onclick = f7;
 let d8 = [2, "4", 12, 67, "hello"];
 
 function f8() {
+  let i = document.querySelector(".i-8").value;
+  t = [];
+  t[0] = i;
+  for (let i = 0; i < d8.length; i++) {
+    t.push(d8[i]);
+  
+}
+d8 = t;
+console.log(d8);
   showArr(".out-8", d8);
 }
 
@@ -123,6 +142,13 @@ document.querySelector(".b-8").onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+  t = [];
+  for (let i = 1; i < d9.length; i++) {
+      t.push(d9[i]);    
+  }
+  d9 = t;
+  console.log(d9);
+
   showArr(".out-9", d9);
 }
 
@@ -137,6 +163,8 @@ document.querySelector(".b-9").onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
+  d10.reverse();
+  console.log(d);
   showArr(".out-10", d10);
 }
 
@@ -150,7 +178,15 @@ document.querySelector(".b-10").onclick = f10;
 
 let d11 = [2, 3, 4, 5, 6, 7];
 
-function f11() {}
+function f11() {
+  let i = +document.querySelector(".i-11").value;
+  
+  console.log(indexOf);
+
+  document.querySelector(".out-11").innerHTML = d11.indexOf(i);
+  
+}
+
 
 document.querySelector(".b-11").onclick = f11;
 
