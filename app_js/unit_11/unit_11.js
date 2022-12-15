@@ -179,11 +179,10 @@ document.querySelector(".b-10").onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-  let i = +document.querySelector(".i-11").value;
+  let i = +document.querySelector(".i-11").value;  
   
-  console.log(indexOf);
-
-  document.querySelector(".out-11").innerHTML = d11.indexOf(i);
+  document.querySelector(".out-11").innerHTML = d11.iOf(i);
+  console.log(d11.iOf(i));
   
 }
 
@@ -198,7 +197,18 @@ document.querySelector(".b-11").onclick = f11;
 
 let d12 = [6, 62, 60, 70, 1, 5];
 
-function f12() {}
+function f12() {
+  let input = +document.querySelector(".i-12").value;  
+  let out = - 1; 
+  for (let i = 0; i < d12.length; i++) {
+    if (input == d12[i]) {
+      out = i; 
+      break     
+    }    
+  }
+  document.querySelector(".out-12").innerHTML = out;
+  console.log(out);
+}
 
 document.querySelector(".b-12").onclick = f12;
 
@@ -211,7 +221,13 @@ document.querySelector(".b-12").onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
-  showArr(".out-13", d13);
+  arr = [];
+  for (let i = 0; i < d13.length; i++) {
+    arr.unshift(d13[i]);
+    
+  }
+  console.log(arr);
+  showArr(".out-13", arr);
 }
 
 document.querySelector(".b-13").onclick = f13;
@@ -225,6 +241,12 @@ document.querySelector(".b-13").onclick = f13;
 let d14 = [];
 
 function f14() {
+  let input = +document.querySelector(".i-14").value; 
+  d14.length = input;
+  for (let i = 0; i < d14.length; i++) {
+     d14[i] = 1;    
+  } 
+  console.log(d14);
   showArr(".out-14", d14);
 }
 
@@ -239,6 +261,17 @@ document.querySelector(".b-14").onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+  let input = +document.querySelector(".i-15").value; 
+  for (let i = 0; i < d15.length; i++) {
+    if (input == d15[i]) {
+      break
+    }
+    else {
+      d15.push(input);
+      break
+    }    
+  }
+  console.log(d15);
   showArr(".out-15", d15);
 }
 
@@ -255,6 +288,7 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
+  d16 = d161.concat(d162);
   showArr(".out-16", d16);
 }
 
@@ -271,6 +305,11 @@ let d171 = ["a", "b", "c", "d"];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
+  for (let i = 0; i < d172.length; i++) {
+    d171.push(d172[i]);    
+  }
+  d17 = d171;
+  console.log(d17);
   showArr(".out-17", d17);
 }
 
@@ -284,9 +323,14 @@ document.querySelector(".b-17").onclick = f17;
 
 let d18 = ["b", "c", "45", "e", "z", "y"];
 
-function f18() {}
+function f18() {
+  let input = document.querySelector(".i-18").value; 
+  document.querySelector(".out-18").innerHTML = d18.includes(input);
+  console.log(d18.includes(input));
+}
 
 document.querySelector(".b-18").onclick = f18;
+
 
 // Task 19
 // Напишите фукнцию f19, которая выводит самую длинную строку maxString из массива d19 в out-19.
@@ -308,7 +352,20 @@ let d19 = [
 ];
 let maxString = "";
 
-function f19() {}
+function f19() {
+  maxString = d19[0];
+  for (let i = 0; i < d19.length; i++) {
+    if (d19[i].length > maxString.length) {
+      maxString = d19[i];
+    }
+  
+    
+  }
+  document.querySelector(".out-19").innerHTML = maxString;
+  console.log(maxString);
+}
+
+
 
 document.querySelector(".b-19").onclick = f19;
 
