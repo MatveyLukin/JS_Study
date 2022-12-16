@@ -259,15 +259,11 @@ let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
   let input = +document.querySelector(".i-15").value;
-  let out = -1;
-  for (let i = 0; i < d15.length; i++) {
-    if (input == d15[i]) {
-      break;
-    } else {
-      d15.push(input);
-      break;
+
+    if (d15.indexOf(input) == - 1) {    
+      d15.push(input);      
     }
-  }
+  
   console.log(d15);
   showArr(".out-15", d15);
 }
