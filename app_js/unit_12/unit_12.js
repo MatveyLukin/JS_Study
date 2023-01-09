@@ -270,6 +270,9 @@ function f14() {
   for (let i = 0; i < a14.length; i++) {
     out += a14[i].length + " ";
   }
+
+  // out = a14.map((item) => item.length);
+
   console.log(out);
   document.querySelector(".out-14").innerHTML = out;
 }

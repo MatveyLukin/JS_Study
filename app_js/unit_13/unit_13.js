@@ -160,9 +160,11 @@ let a9 = {
 };
 
 function f9() {
-  let k = document.querySelector(".i-9").value;
+  let i = document.querySelector(".i-9").value;
   let out = "";
-  if (k in a8) out += a8[k] + " ";
+  for (let k in a9) {
+    if (a9[k] == i) out += a9[k] + " ";
+  }
 
   document.querySelector(".out-9").innerHTML = out;
 }
@@ -263,8 +265,7 @@ let a14 = {
 
 function f14() {
   let out = "";
-  for(let key in a14)
-  out +=`${a14[key][0]} `;
+  for (let key in a14) out += `${a14[key][0]} `;
   document.querySelector(".out-14").innerHTML = out;
 }
 
@@ -282,12 +283,12 @@ let a15 = {
   ivan: [9, 10],
 };
 
-function f15() {  
+function f15() {
   let out = "";
-for(let key in a15)
-for(let j in a15[key])
-out +=`${a15[key][j]} `;
-document.querySelector(".out-15").innerHTML = out;
+  for (let key in a15) {
+    for (let j in a15[key]) out += `${a15[key][j]} `;
+  }
+  document.querySelector(".out-15").innerHTML = out;
 }
 
 document.querySelector(".b-15").onclick = f15;
@@ -312,11 +313,8 @@ let a16 = {
 
 function f16() {
   let out = "";
-  for(let key in a16)
+  for (let key in a16) out += `${a16[key]["name"]} `;
 
-    out +=`${a16[key]['name']} `;
-  
-  
   document.querySelector(".out-16").innerHTML = out;
 }
 
@@ -341,10 +339,9 @@ let a17 = {
 };
 
 function f17() {
-  let out = '';
-  for(let key in a17) {
-    if(a17[key]['age'] > 30)
-    out +=`${a17[key]['name']} `;
+  let out = "";
+  for (let key in a17) {
+    if (a17[key]["age"] > 30) out += `${a17[key]["name"]} `;
   }
   document.querySelector(".out-17").innerHTML = out;
 }
@@ -364,16 +361,13 @@ function f18() {
   let line = document.querySelector(".i-18").value;
   let out = "";
   if (a18[line] !== undefined) {
-    // console.log(a18[key]);
+    console.log(a18[line]);
     for (let i = 0; i < a18[line].length; i++) {
-      out +=a18[line][i] + " ";
-     
+      out += `${a18[line][i]} `;
     }
-  
   }
- 
-  document.querySelector(".out-18").innerHTML = out;
 
+  document.querySelector(".out-18").innerHTML = out;
 }
 document.querySelector(".b-18").onclick = f18;
 
@@ -387,7 +381,17 @@ let a19 = {
   green: ["Syrets", "Zoloti Vorota", "Klovska", "Vidubichi"],
 };
 
-function f19() {}
+function f19() {
+  let station = document.querySelector(".i-19").value.toLowerCase();
+
+  let out = "";
+  for (let key in a19) {
+    for (let i = 0; i < a19[key].length; i++) {
+      if (a19[key][i].toLowerCase() == station) out = `${key}`;
+    }
+  } // if (a19[key].find((item) => item.toLowerCase() == station)) out = `${key} `;
+  document.querySelector(".out-19").innerHTML = out;
+}
 
 document.querySelector(".b-19").onclick = f19;
 
@@ -415,6 +419,14 @@ let a20 = {
   ],
 };
 
-function f20() {}
+function f20() {
+  let out = "";
+  for (let key in a20) {
+    for (let i = 0; i < a20[key].length; i++) {
+      if (a20[key][i][1] == 2) out += `${a20[key][i][0]} `;
+    }
+  }
+  document.querySelector(".out-20").innerHTML = out;
+}
 
 document.querySelector(".b-20").onclick = f20;
