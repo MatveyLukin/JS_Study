@@ -163,7 +163,7 @@ function f9() {
   let i = document.querySelector(".i-9").value;
   let out = "";
   for (let k in a9) {
-    if (a9[k] == i) out += a9[k] + " ";
+    if (a9[k] == i) out += k + " ";
   }
 
   document.querySelector(".out-9").innerHTML = out;
