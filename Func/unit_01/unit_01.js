@@ -187,7 +187,7 @@ let z9 = 3;
 const s9 = document.querySelector(".s-9");
 
 function t9() {
-  z9 = s9;
+  s9.value = z9;
 }
 
 document.querySelector(".b-9").addEventListener("click", t9);
@@ -205,6 +205,11 @@ function showArr() {
 
 function t10() {
   ar10_res = []; // очищаем
+  for (let i = 0; i < ar10.length; i++) {
+    if (ar10[i].number() == true) {
+    }
+    const element = array[i];
+  }
 }
 
 document.querySelector(".b-10").addEventListener("click", t10);
