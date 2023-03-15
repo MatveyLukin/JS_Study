@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Unit 14</title>
-</head>
+    <link rel="stylesheet" href="./style/style_14.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>UNIT 14. API Погода</h1>
-        <h2><a href="https://itgid.info/course/javascript-2" target="_blank">JavaScript v.2.0 - курс Лущенко
-                Александра</a></h2>
-        <p>Верстку в этом юните - делаете самостоятельно. Имя CSS файла - любое.</p>
-        
-
+      <select name="cities" id="city">
+        <option value="3143244">Oslo</option>
+        <option value="3435907">Buenos Aires</option>
+        <option value="4183849">Boston</option>
+        <option value="1701667">Manila</option>
+      </select>
+      <div class="package featured">
+        <p class="package-country"></p>
+        <p class="package-city">Oslo</p>
+        <hr />
+        <p class="temperature">10&deg;</p>
+        <p class="disclaimer">Clouds</p>
+        <hr />
+        <ul class="features">
+          <li>Feature 1</li>
+          <li class="speed">wind speed</li>
+          <li class="humidity">humidity</li>
+          <li class="pressure">pressure</li>
+        </ul>
+      </div>
+      <!-- <button class="button-primary">Go</button> -->
     </div>
 
     <script src="unit_14.js"></script>
-</body>
-
+  </body>
 </html>
