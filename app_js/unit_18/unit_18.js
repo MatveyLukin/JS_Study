@@ -93,8 +93,7 @@ document.querySelectorAll(".task-5").forEach((elem) => {
 let str6 = "helloworld";
 
 function t6() {
-  a6_res = [];
-  a6_res.push(str6.split(""));
+  a6_res = str6.split("");
   console.log(a6_res);
 
   document.querySelector(".out-6").innerHTML = a6_res;
@@ -108,8 +107,7 @@ document.querySelector(".b-6").onclick = t6;
 let str7 = "hello world hi mazai";
 
 function t7() {
-  a7_res = [];
-  a7_res.push(str7.split(" "));
+  a7_res = str7.split(" ");
   console.log(a7_res);
 
   document.querySelector(".out-7").textContent = a7_res;
@@ -155,11 +153,11 @@ let a10 = { name: "ivan", age: 15, sex: 1, id: 45 };
 console.log(a10);
 
 function t10() {
-  // for (let key in a10) {
+  // for (let key in a10) {   //мой вариант
   // a10_res += `${key}=${a10[key]}&`;
   // }
   // a10_res = "?" + a10_res;
-  let temp = new URLSearchParams(a10);
+  let temp = new URLSearchParams(a10); // нагуглил
   a10_res = "?" + temp.toString();
   console.log(a10_res);
   document.querySelector(".out-10").textContent = a10_res;
