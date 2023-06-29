@@ -108,7 +108,10 @@ let max = 1150;
 function f4() {
   const xhr = new XMLHttpRequest();
 
-  xhr.open("GET", URL + "/api/25/random/random-number?min=1000&max=1150");
+  xhr.open(
+    "GET",
+    URL + "/api/25/random/random-number?min=" + min + "&max=" + max + ""
+  );
   xhr.setRequestHeader("apikey", APIKEY);
 
   xhr.onload = function () {
