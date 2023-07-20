@@ -175,7 +175,10 @@ async function f7() {
   });
 
   let data = await res.json();
-  let img = document.createElement();
+  console.log(data);
+  let img = document.createElement("img");
+  img.src = URL + data.result.image;
+  document.querySelector(".out-7").append(img);
 }
 
 document.querySelector(".b-7").onclick = f7;
@@ -187,7 +190,20 @@ document.querySelector(".b-7").onclick = f7;
 // если запрос отправлен верно, то будет получен объект со случайным числом
 // выведите в .out-8 данное число.
 
-async function f8() {}
+async function f8() {
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/random/random-number", {
+    method: "GET",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+
+  document.querySelector(".out-8").innerHTML = data["random-number"];
+}
 
 document.querySelector(".b-8").onclick = f8;
 
@@ -203,7 +219,23 @@ document.querySelector(".b-8").onclick = f8;
 let min = 400;
 let max = 500;
 
-async function f9() {}
+async function f9() {
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(
+    URL + "/api/26/random/random-number?min=" + min + "&max=" + max + "",
+    {
+      method: "GET",
+      headers: requestHeaders,
+    }
+  );
+
+  let data = await res.json();
+  console.log(data);
+
+  document.querySelector(".out-9").innerHTML = data["random-number"];
+}
 
 document.querySelector(".b-9").onclick = f9;
 
@@ -216,7 +248,25 @@ document.querySelector(".b-9").onclick = f9;
 // если запрос отправлен верно, то будет получен объект со случайным число от min до max.
 // выведите число в .out-10
 
-async function f10() {}
+async function f10() {
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const formData = new FormData();
+  formData.append("min", min);
+  formData.append("max", max);
+
+  const res = await fetch(URL + "/api/26/random/random-number", {
+    method: "POST",
+    headers: requestHeaders,
+    body: formData,
+  });
+
+  let data = await res.json();
+  console.log(data);
+
+  document.querySelector(".out-10").innerHTML = data["random-number"];
+}
 
 document.querySelector(".b-10").onclick = f10;
 
@@ -229,7 +279,24 @@ document.querySelector(".b-10").onclick = f10;
 // Если запрос сделан правильно, то сервер возвратит объект с строкой случайных символов длиной 16.
 // Выведите строку в .out-11
 
-async function f11() {}
+async function f11() {
+  let stringLength = document.querySelector(".i-11").value;
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(
+    URL + "/api/26/random/random-string?length=" + stringLength,
+    {
+      method: "GET",
+      headers: requestHeaders,
+    }
+  );
+
+  let data = await res.json();
+  console.log(data);
+
+  document.querySelector(".out-11").innerHTML = data["random-string"];
+}
 
 document.querySelector(".b-11").onclick = f11;
 
@@ -242,7 +309,28 @@ document.querySelector(".b-11").onclick = f11;
 // если запрос отправлен верно, то будет возвращен пароль длиной равный указанной длине и если указан symbols равный 1 то в пароле будут спецсимволы
 // выведите в .out-12 полученный пароль.
 
-async function f12() {}
+async function f12() {
+  let stringLength = document.querySelector(".i-12").value;
+
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const formData = new FormData();
+  formData.append("length", stringLength);
+  document.getElementById("ch-12").checked
+    ? formData.append("symbols", 1)
+    : formData.append("symbols", 0);
+
+  const res = await fetch(URL + "/api/26/random/generate-password", {
+    method: "POST",
+    headers: requestHeaders,
+    body: formData,
+  });
+
+  let data = await res.json();
+  console.log(data);
+  document.querySelector(".out-12").innerHTML = data["password"];
+}
 
 document.querySelector(".b-12").onclick = f12;
 
@@ -258,7 +346,30 @@ document.querySelector(".b-12").onclick = f12;
 
 // не забывайте для авторизации отправлять apikey с указанным ключом.
 
-async function f13() {}
+async function f13() {
+  let stringLength = document.querySelector(".i-13").value;
+
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const formData = new FormData();
+  formData.append("length", stringLength);
+  document.getElementById("ch-131").checked
+    ? formData.append("symbols", 1)
+    : formData.append("symbols", 0);
+  document.getElementById("ch-132").checked
+    ? formData.append("uppercase", 1)
+    : formData.append("uppercase", 0);
+
+  const res = await fetch(URL + "/api/26/random/generate-password", {
+    method: "POST",
+    headers: requestHeaders,
+    body: formData,
+  });
+
+  let data = await res.json();
+  document.querySelector(".out-13").innerHTML = data["password"];
+}
 
 document.querySelector(".b-13").onclick = f13;
 
@@ -269,7 +380,24 @@ document.querySelector(".b-13").onclick = f13;
 // если все сделано верно, то получите объект с описанием миров игры GoW
 // выведите в .out-14 title миров через пробел.
 
-async function f14() {}
+async function f14() {
+  let out = "";
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/gow/world", {
+    method: "GET",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+  data.worlds.forEach((element) => {
+    out += `${element.title} `;
+  });
+
+  document.querySelector(".out-14").innerHTML = out;
+}
 
 document.querySelector(".b-14").onclick = f14;
 
@@ -280,7 +408,21 @@ document.querySelector(".b-14").onclick = f14;
 // где niflheim - название мира полученное из .s-15
 // выведите описание мира (description) в out-15
 
-async function f15() {}
+async function f15() {
+  let worldName = document.querySelector(".s-15").value;
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/gow/world/" + worldName, {
+    method: "GET",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+
+  document.querySelector(".out-15").innerHTML = data.world.description;
+}
 
 document.querySelector(".b-15").onclick = f15;
 
@@ -292,7 +434,23 @@ document.querySelector(".b-15").onclick = f15;
 // если все сделано верно, то получите объект с описанием мира где правитель Сурт игры GoW.
 // выведите в .out-16 руну данного мира. Как изображение (createElement). Очищайте out-16 в начале функции.
 
-async function f16() {}
+async function f16() {
+  document.querySelector(".out-16").innerHTML = "";
+  const lordName = document.querySelector(".s-16").value;
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/gow/governor/" + lordName, {
+    method: "GET",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+  let img = document.createElement("img");
+  img.src = URL + data.world.rune;
+  document.querySelector(".out-16").append(img);
+}
 
 document.querySelector(".b-16").onclick = f16;
 
@@ -303,7 +461,21 @@ document.querySelector(".b-16").onclick = f16;
 // если все сделано верно, то получите объект с текущим временем сервера.
 // выведите в .out-17 время в формате час:минуты
 
-async function f17() {}
+async function f17() {
+  let out = "";
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/get-time", {
+    method: "POST",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+  out = data.time.h + ":" + data.time.m;
+  document.querySelector(".out-17").innerHTML = out;
+}
 
 document.querySelector(".b-17").onclick = f17;
 
@@ -315,6 +487,25 @@ document.querySelector(".b-17").onclick = f17;
 // выведите в .out-18 руны как изображения, а в качестве атрибута alt установите название мира.
 // выполните очистку .out-18 в начале функции
 
-async function f18() {}
+async function f18() {
+  document.querySelector(".out-18").innerHTML = "";
+  const requestHeaders = new Headers();
+  requestHeaders.append("apikey", APIKEY);
+
+  const res = await fetch(URL + "/api/26/gow/rune", {
+    method: "POST",
+    headers: requestHeaders,
+  });
+
+  let data = await res.json();
+  console.log(data);
+
+  for (const key in data.rune) {
+    let image = document.createElement("img");
+    image.src = URL + data.rune[key];
+    image.setAttribute("alt", key);
+    document.querySelector(".out-18").append(image);
+  }
+}
 
 document.querySelector(".b-18").onclick = f18;
