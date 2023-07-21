@@ -48,36 +48,51 @@ document.querySelector(".b-1").addEventListener("click", f1);
 // В качестве then промиса укажите функцию resolveF2, rejectError.
 // функция resolveF2 должна выводить в .out-2 полученную случайную строку.
 
-function f2() {
+// function f2() {
+//   const requestHeaders = new Headers();
+//   requestHeaders.append("apikey", APIKEY);
+
+//   const p = new Promise((resolve, reject) => {
+//     fetch(URL + "/api/27/random/random-string", {
+//       headers: requestHeaders,
+//     })
+//       .then((response) => {
+//         if (response.ok) resolve(response.json());
+//         else {
+//           reject(response);
+//         }
+//       })
+//       .catch((error) => reject(error));
+//   });
+//   p.then(resolveF2, rejectError);
+// }
+
+// function rejectError(err) {
+//   console.log("Problem");
+//   console.log(err);
+// }
+
+// function resolveF2(data) {
+//   console.log(data);
+//   document.querySelector(".out-2").textContent = data["random-string"];
+// }
+
+async function f2() {
   const requestHeaders = new Headers();
-  requestHeaders.append("apikey", APIKEY);
+    requestHeaders.append("apikey", APIKEY);
 
-  const p = new Promise((resolve, reject) => {
-    fetch(URL + "/api/27/random/random-string", {
+    const res = await fetch(URL + '/api/27/random/random-string', {
       headers: requestHeaders,
-    })
-      .then((response) => {
-        if (response.ok) resolve(response.json());
-        else {
-          reject(response);
-        }
-      })
-      .catch((error) => reject(error));
-  });
-  p.then(resolveF2, rejectError);
-}
+    });
 
-function rejectError(err) {
-  console.log("Problem");
-  console.log(err);
-}
-
-function resolveF2(data) {
-  console.log(data);
-  document.querySelector(".out-2").textContent = data["random-string"];
+    const data = await res.json();
+      console.log(data);
+    document.querySelector('.out-2').textContent = data['random-string'];
 }
 
 document.querySelector(".b-2").onclick = f2;
+
+// document.querySelector(".b-2").onclick = f2;
 
 // Task 3
 // При нажатии кнопки .b-3 срабатывает функция f3. Функция:
