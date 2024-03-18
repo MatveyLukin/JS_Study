@@ -434,17 +434,12 @@ p {
   grid-area: header;
 }
 
-.out-9.news-1 {
+.out-9 .news-1 {
+  grid-area: news-1;
   display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
+  grid-gap: 5px;
   grid-template-areas: "news-5 news-6";
   grid-template-columns: repeat(2, 1fr);
-  news
-}
-
-.out-9 .news-6 {
-  grid-area: news-6;
 }
 
 .out-9 .news-2 {
