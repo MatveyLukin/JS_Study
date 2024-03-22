@@ -164,7 +164,7 @@ section h2 {
 }
 
 .site-header {
-    background: background; rgba(24, 28, 39, 1);
+    background: background rgba(24, 28, 39, 1);
     background: -moz-linear-gradient(left, rgba(24, 28, 39, 1) 0%, rgba(12, 32, 56, 1) 47%, rgba(24, 28, 39, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(24, 28, 39, 1)), color-stop(47%, rgba(12, 32, 56, 1)), color-stop(100%, rgba(24, 28, 39, 1)));
     background: -webkit-linear-gradient(left, rgba(24, 28, 39, 1) 0%, rgba(12, 32, 56, 1) 47%, rgba(24, 28, 39, 1) 100%);
