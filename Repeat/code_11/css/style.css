@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: burlywood;
+    padding: 10px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.one, .two, .tree {
+    float: left;
+    height: 50vh;
+}
+
+.one {
+    background: orangered;
+    width: 33%;
+}
+.two {
+    background: blueviolet;
+    width: 33%;
+}
+.tree {
+    background: brown;
+    width: 33%;
+}
+
+@media (max-width: 800px){
+    .container {
+        background: green;
+    }
+    .one, .two {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .tree {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .container {
+        background: orange;
+    }
+     .one, .two {
+        width: 100%;
+    }
+}
