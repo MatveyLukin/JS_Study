@@ -1,0 +1,67 @@
+.one::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: orangered;
+    display: block;
+}
+
+p::after {
+    content: "***";
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.wrap {
+    width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    background: lightblue;
+}
+
+.left, .right {
+    float: left;
+    width: 50%;
+    min-height: 200px;
+}
+
+.left {
+    background: blue;
+}
+.right {
+    background: red;
+}
+
+div.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    display: block;
+    background: orange;
+    width: 200px;
+    transition: all ease 1s;
+}
+
+a:hover {
+    color: red;
+    background: blue;
+    width: 500px;
+}
+
+input {
+    margin: 50px;
+}
+
+input:active {
+    background: orange;
+}
+
+input:focus {
+    background: orange;
+    border: 1px solid #222;
+    border-radius: 0;
+}
