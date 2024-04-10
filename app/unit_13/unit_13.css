@@ -230,6 +230,7 @@ p {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   left: 0;
+  animation-fill-mode: backwards;
 }
 
 @keyframes tsk-4 {
