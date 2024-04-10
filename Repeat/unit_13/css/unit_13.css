@@ -202,6 +202,7 @@ p {
   margin: 0 auto;
   border: 1px solid black;
   position: relative;
+  overflow: hidden;
 }
 
 .out-4-inner {
@@ -210,10 +211,10 @@ p {
   /* display:s block; */
   position: absolute;
   animation-name: task4;
-  /* animation-iteration-count: infinite; */
-  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: ease-in-out; */
   left: 0;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
 }
 
@@ -223,7 +224,7 @@ p {
   display: inline-block;
   text-align: center;
   /* vertical-align: middle; */
-  padding: 5px;
+  /* padding: 5px; */
   /* left: 0; */
 }
 
@@ -238,10 +239,54 @@ p {
   0% {
     left: 0;
   }
-  50% {
+  25% {
     left: -100px;
   }
-  100% {
+  50% {
     left: -200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.out-5 {
+  width: 140px;
+  height: 140px;
+  border: 1px solid black;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.out-5-inner {
+  width: 560px;
+  height: 140px;
+  position: absolute;
+  animation-name: tsk5;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.out-5-inner img {
+  width: 140px;
+}
+
+@keyframes tsk5 {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: -140px;
+  }
+  50% {
+    left: -280px;
+  }
+  75% {
+    left: -420px;
+  }
+  100% {
+    left: 0px;
   }
 }
